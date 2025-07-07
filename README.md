@@ -67,7 +67,7 @@ cd fullstack-log-ui
 ```bash
 cd Backend
 npm install
-npm run dev
+npm start
 ```
 
 * Runs on: `http://localhost:3000`
