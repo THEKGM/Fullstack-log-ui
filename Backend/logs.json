@@ -34,5 +34,17 @@
     "metadata": {
       "parentResourceId": "analytics-root"
     }
+  },
+  {
+    "level": "debug",
+    "message": "Itaque incididunt co",
+    "resourceId": "Ad sunt natus id dol",
+    "timestamp": "1994-08-17T09:38:00.000Z",
+    "traceId": "Voluptatum iste labo",
+    "spanId": "Veniam sed velit si",
+    "commit": "Est minim omnis eiu",
+    "metadata": {
+      "parentResourceId": "Perspiciatis nesciu"
+    }
   }
 ]

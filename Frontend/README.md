@@ -12,17 +12,30 @@ log-ui/
 └── backend/         # Node.js + Express + JSON file persistence
 ```
 
+## 🔢 Folder Structure Overview frontend
+
+````
+src/
+├── components/      # FilterBar, LogTable, AddLogModal
+├── hooks/           # useLogs hook to fetch and manage log state
+├── services/        # Axios wrapper for backend log API
+├── types.ts         # TypeScript interfaces for LogEntry and Filters
+├── pages/           # LogsPage - combines all components
+├── App.tsx          # Entry point for the app
+├── main.tsx         # Vite bootstrapping
+└── index.css        # TailwindCSS base
+
 ---
 
 ## 🚀 Live Features
 
-✅ Dynamic log filtering (by level, message, resourceId, timestamp)  
-✅ Full-text search  
-✅ Color-coded log level UI  
-✅ Debounced search input  
-✅ Graceful empty state handling  
-✅ Static header + scrollable table  
-✅ Dummy data load (dev testing)  
+✅ Dynamic log filtering (by level, message, resourceId, timestamp)
+✅ Full-text search
+✅ Color-coded log level UI
+✅ Debounced search input
+✅ Graceful empty state handling
+✅ Static header + scrollable table
+✅ Dummy data load (dev testing)
 ✅ File-based persistence (no database)
 
 ---
@@ -32,9 +45,9 @@ log-ui/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/thekgm/log-ui.git
+git clone https://github.com/THEKGM/Fullstack-log-ui.git
 cd log-ui
-```
+````
 
 ---
 
@@ -110,6 +123,27 @@ Inspired by dashboards like **Datadog** and **Grafana**:
 
 ---
 
+---
+
+## 📈 Features Implemented
+
+| Feature                                              | Status |
+| ---------------------------------------------------- | ------ |
+| View all logs (reverse-chronological)                | ✅     |
+| Full-text search on `message`                        | ✅     |
+| Filter by `level`, `resourceId`, and timestamp range | ✅     |
+| Combine multiple filters (AND logic)                 | ✅     |
+| Visual styling per `level` (color-coded)             | ✅     |
+| Clear filters button                                 | ✅     |
+| Debounced search input (300ms)                       | ✅     |
+| Empty states: no data / no result / loading          | ✅     |
+| Table view with scroll and sticky headers            | ✅     |
+| Add Log Modal (form input) with POST request         | ✅     |
+| Form validation and feedback                         | ✅     |
+| New logs appear after adding                         | ✅     |
+
+---
+
 ## 🧪 Optional Features
 
 If enabled:
@@ -142,7 +176,7 @@ npm test
 
 ## 👨‍💻 Author
 
-Made by **[Your Name]**  
+Made by **[Keyur Moradiya]**  
 GitHub: [github.com/thekgm](https://github.com/thekgm)
 
 ---

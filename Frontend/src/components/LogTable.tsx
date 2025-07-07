@@ -32,21 +32,20 @@ export const LogTable: React.FC<Props> = ({ logs, loading, noResults }) => {
           {/* Table Head */}
           <thead className="bg-gray-100 sticky top-0 z-10">
             <tr>
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
-                Level
-              </th>
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
-                Timestamp
-              </th>
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
-                Message
-              </th>
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
-                Resource ID
-              </th>
-              <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
-                Trace Info
-              </th>
+              {[
+                "Level",
+                "Timestamp",
+                "Message",
+                "Resource ID",
+                "Trace Info",
+              ].map((h) => (
+                <th
+                  key={h}
+                  className="px-4 py-3 text-left text-sm font-medium text-gray-500"
+                >
+                  {h}
+                </th>
+              ))}
             </tr>
           </thead>
 
@@ -54,21 +53,11 @@ export const LogTable: React.FC<Props> = ({ logs, loading, noResults }) => {
           <tbody className="divide-y divide-gray-200 animate-pulse">
             {Array.from({ length: 5 }).map((_, i) => (
               <tr key={i} className="bg-white">
-                <td className="px-4 py-3">
-                  <div className="h-4 w-20 bg-gray-300 rounded"></div>
-                </td>
-                <td className="px-4 py-3">
-                  <div className="h-4 w-28 bg-gray-300 rounded"></div>
-                </td>
-                <td className="px-4 py-3">
-                  <div className="h-4 w-56 bg-gray-300 rounded"></div>
-                </td>
-                <td className="px-4 py-3">
-                  <div className="h-4 w-24 bg-gray-300 rounded"></div>
-                </td>
-                <td className="px-4 py-3">
-                  <div className="h-4 w-40 bg-gray-300 rounded"></div>
-                </td>
+                {[20, 28, 56, 24, 40].map((w, j) => (
+                  <td key={j} className="px-4 py-3">
+                    <div className={`h-4 w-${w} bg-gray-300 rounded`}></div>
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
@@ -116,14 +105,20 @@ export const LogTable: React.FC<Props> = ({ logs, loading, noResults }) => {
         {/* Table head */}
         <thead className="sticky top-0 bg-gray-100 text-gray-700 z-10">
           <tr className="border-l-4 border-gray-500 uppercase tracking-wider">
-            <th className="p-3">Level</th>
-            <th className="p-3">Message</th>
-            <th className="p-3">Resource</th>
-            <th className="p-3">Timestamp</th>
-            <th className="p-3">Trace ID</th>
-            <th className="p-3">Span ID</th>
-            <th className="p-3">Commit</th>
-            <th className="p-3">Metadata</th>
+            {[
+              "Level",
+              "Message",
+              "Resource",
+              "Timestamp",
+              "Trace ID",
+              "Span ID",
+              "Commit",
+              "Metadata",
+            ].map((h, i) => (
+              <th key={i} className="p-3">
+                {h}
+              </th>
+            ))}
           </tr>
         </thead>
 
